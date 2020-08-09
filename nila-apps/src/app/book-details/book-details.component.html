@@ -1,0 +1,34 @@
+<div *ngIf="router.url === '/sort'">
+  <ul class="text-center list-inline py-3">
+    <li class="list-inline-item">
+ <select id="sortSelect" (change)="selectChangeHandler($event)">
+   <option value="bookNames">Sort by Book Name</option>
+   <option value="bookAuthors">Sort by Book Author</option>
+   <option value="yearPublished">Sort by Book Published Year</option>
+ </select> 
+ </li>
+ <li class="list-inline-item">
+<button id="sort-button" (click) = "sortByAsc()">Sort</button>
+</li>
+</ul>
+</div>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Year Published</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <td>{{ book.bookNames }}</td>
+            <td>{{ book.bookAuthors }}</td>
+            <td>{{ book.yearPublished }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
