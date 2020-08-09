@@ -1,0 +1,5 @@
+insert into books values('The Secret','Rhonda Byrne',2006)
+insert into books values('Untouchable','Mulk Raj',1960)
+insert into books values('The Guide','R.K.Narayan',1951)
+insert into books values('Combat of Shadows','Manohar Malgonkar',1970)
+insert into books values('Sea of Poppies','Amitav Ghosh',2000)
